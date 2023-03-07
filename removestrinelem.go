@@ -1,6 +1,7 @@
 package piscine
 
 func RemoveStringElem(s []string, i int) []string {
-	s[i] = s[len(s)-1]
+	s = append(s[:i],s[i+1:]...)
+	println(s)
 	return s[:len(s)-1]
 }
